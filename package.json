@@ -5,7 +5,9 @@
   "main": "bin/www",
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bin/www",
+    "postinstall": "mkdir -p db"
   },
   "repository": {
     "type": "git",
@@ -27,6 +29,7 @@
     "body-parser": "^1.15.0",
     "dotenv": "^2.0.0",
     "express": "^4.13.4",
+    "moment-timezone": "^0.5.3",
     "nedb": "^1.8.0"
   }
 }
