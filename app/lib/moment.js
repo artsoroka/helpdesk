@@ -2,5 +2,9 @@ var moment = require('moment-timezone');
 var config = require('../../config').DateTime;  
 
 module.exports = function(){
-    return moment.tz(config.timezone).format(config.format);   
+	var ts = Date.now(); 
+	return {
+		unix : ts, 
+    	human: moment(ts).tz(config.timezone).format(config.format)
+    };   
 }; 
